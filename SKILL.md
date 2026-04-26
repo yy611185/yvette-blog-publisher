@@ -1,13 +1,13 @@
 ---
 name: yvette-blog-publisher
-description: Create properly formatted Markdown blog posts for the Yvette Space Astro site and push them to the connected GitHub repository. Use when the user asks OpenClaw to write, draft, publish, upload, or push a blog/article/note/content update to the Yvette Space website, GitHub, or Cloudflare Pages. / 为 Yvette Space Astro 网站创建格式正确的 Markdown 博客文章，并推送到已连接的 GitHub 仓库。用户要求 OpenClaw 写作、起草、发布、上传或推送博客、文章、笔记、内容更新到 Yvette Space 网站、GitHub 或 Cloudflare Pages 时使用。
+description: Create properly formatted Markdown blog posts for the Yvette Space Astro site and push them to the GitHub `web0202` project. Use when the user asks OpenClaw to write, draft, publish, upload, or push a blog/article/note/content update to the Yvette Space website, GitHub, or Cloudflare Pages. / 为 Yvette Space Astro 网站创建格式正确的 Markdown 博客文章，并推送到 GitHub 的 `web0202` 项目。用户要求 OpenClaw 写作、起草、发布、上传或推送博客、文章、笔记、内容更新到 Yvette Space 网站、GitHub 或 Cloudflare Pages 时使用。
 ---
 
 # Yvette Blog Publisher
 
-Use this skill to turn the user's requested topic or source material into a valid Astro Content Collection Markdown post for the Yvette Space website, then commit it to GitHub so Cloudflare Pages can rebuild the site.
+Use this skill to turn the user's requested topic or source material into a valid Astro Content Collection Markdown post for the Yvette Space website, then commit it to the GitHub `web0202` project so Cloudflare Pages can rebuild the site.
 
-使用此技能将用户请求的主题或素材转换为 Yvette Space 网站可用的 Astro Content Collection Markdown 文章，然后提交到 GitHub，使 Cloudflare Pages 自动重新构建网站。
+使用此技能将用户请求的主题或素材转换为 Yvette Space 网站可用的 Astro Content Collection Markdown 文章，然后提交到 GitHub 的 `web0202` 项目，使 Cloudflare Pages 自动重新构建网站。
 
 ## Target Project
 
@@ -15,6 +15,8 @@ Use this skill to turn the user's requested topic or source material into a vali
 
 - Site type: Astro static site deployed by GitHub + Cloudflare Pages.
   - 站点类型：通过 GitHub + Cloudflare Pages 部署的 Astro 静态网站。
+- GitHub target project: `web0202`
+  - GitHub 目标项目：`web0202`
 - Blog directory: `src/content/blog/`
   - 博客目录：`src/content/blog/`
 - Blog collection schema:
@@ -52,8 +54,8 @@ Gather or infer:
     - 只有当用户明确表示发布、上线、直接更新网站时，才使用 `draft: false` 并推送到生产分支。
 - Category and tags. Infer reasonable values if not provided.
   - 分类和标签。若用户未提供，应推断合理值。
-- Target repository and branch from environment/config. If unknown, inspect the current Git remote or ask the user.
-  - 从环境或配置中确定目标仓库和分支。若未知，检查当前 Git remote 或询问用户。
+- Target repository/project is `web0202`; determine the target branch from environment/config. If the branch is unknown, inspect the current Git remote or ask the user.
+  - 目标仓库/项目为 `web0202`；从环境或配置中确定目标分支。若分支未知，检查当前 Git remote 或询问用户。
 
 Do not invent private facts. If the post needs personal experience, legal/medical/financial claims, or recent facts that are not in the provided material, mark uncertain sections clearly or ask for confirmation before publishing.
 
